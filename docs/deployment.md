@@ -22,6 +22,8 @@ Zaimportuj to samo repozytorium trzy razy, za każdym razem wybierając inny kat
 
 Użyj instalacji `pnpm install --frozen-lockfile` i wersji Node zgodnej z głównym `package.json`. Dla aplikacji korzystających z pakietów workspace włącz dołączanie plików spoza Root Directory. Nie dodawaj pola `rootDirectory` do `vercel.json`, bo jest to ustawienie projektu w Vercel.
 
+Plik `apps/mobile/vercel.json` włącza `cleanUrls`, aby adresy `/contacts` i `/sign-in` działały również po odświeżeniu strony.
+
 Pierwsze wdrożenie może działać jako demo. CRM dostaje `SEED_MODE=demo`. Mobile bez `EXPO_PUBLIC_API_URL` pokazuje samodzielny podgląd. Landing dostaje linki do rzeczywistych adresów obu aplikacji.
 
 Przed utworzeniem projektów sprawdź aktywne konto lub osobisty team Vercel. Nazwa zespołu w konfiguracji CLI nie powinna być odziedziczona z innej firmy.

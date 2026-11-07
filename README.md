@@ -6,7 +6,7 @@ Starter działa w trybie demonstracyjnym bez konta Neon i bez klucza Resend. Try
 
 ## Adresy startera
 
-Docelowe miejsca publikacji tej bazy. Stan wdrożenia można sprawdzić w GitHub i Vercel.
+Repozytorium i podglądy tej bazy. Stan wdrożenia można sprawdzić w GitHub i Vercel.
 
 | Element                | Adres                                                                          |
 | ---------------------- | ------------------------------------------------------------------------------ |
