@@ -1,0 +1,152 @@
+{
+  "createdAt": "2026-11-07",
+  "license": "MIT",
+  "redistributedThirdPartySkills": false,
+  "skills": [
+    {
+      "name": "seed-nuxt",
+      "path": ".agents/skills/seed-nuxt/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": ["https://nuxt.com/docs/4.x", "https://vuejs.org/guide/"]
+    },
+    {
+      "name": "seed-nuxt-ui",
+      "path": ".agents/skills/seed-nuxt-ui/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": ["https://ui.nuxt.com/docs/getting-started", "https://ui.nuxt.com/mcp"]
+    },
+    {
+      "name": "seed-better-auth",
+      "path": ".agents/skills/seed-better-auth/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": [
+        "https://www.better-auth.com/docs",
+        "https://www.better-auth.com/docs/integrations/nuxt",
+        "https://www.better-auth.com/docs/integrations/expo"
+      ]
+    },
+    {
+      "name": "seed-neon-postgres",
+      "path": ".agents/skills/seed-neon-postgres/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": ["https://neon.com/docs", "https://orm.drizzle.team/docs/overview"]
+    },
+    {
+      "name": "seed-resend",
+      "path": ".agents/skills/seed-resend/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": [
+        "https://resend.com/docs",
+        "https://resend.com/docs/dashboard/domains/introduction"
+      ]
+    },
+    {
+      "name": "seed-expo-overview",
+      "path": ".agents/skills/seed-expo-overview/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": ["https://docs.expo.dev", "https://docs.expo.dev/workflow/monorepos/"]
+    },
+    {
+      "name": "seed-expo-structure",
+      "path": ".agents/skills/seed-expo-structure/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": [
+        "https://docs.expo.dev/router/basics/core-concepts/",
+        "https://docs.expo.dev/workflow/monorepos/"
+      ]
+    },
+    {
+      "name": "seed-expo-router",
+      "path": ".agents/skills/seed-expo-router/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": [
+        "https://docs.expo.dev/router/introduction/",
+        "https://docs.expo.dev/router/web/static-rendering/"
+      ]
+    },
+    {
+      "name": "seed-expo-native-ui",
+      "path": ".agents/skills/seed-expo-native-ui/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": ["https://docs.expo.dev/ui/", "https://reactnative.dev/docs/accessibility"]
+    },
+    {
+      "name": "seed-expo-data",
+      "path": ".agents/skills/seed-expo-data/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": [
+        "https://docs.expo.dev/develop/data-fetching/",
+        "https://www.better-auth.com/docs/integrations/expo"
+      ]
+    },
+    {
+      "name": "seed-expo-upgrade",
+      "path": ".agents/skills/seed-expo-upgrade/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": [
+        "https://docs.expo.dev/workflow/upgrading-expo-sdk-walkthrough/",
+        "https://docs.expo.dev/versions/latest/"
+      ]
+    },
+    {
+      "name": "seed-eas",
+      "path": ".agents/skills/seed-eas/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": [
+        "https://docs.expo.dev/build/introduction/",
+        "https://docs.expo.dev/submit/introduction/"
+      ]
+    },
+    {
+      "name": "seed-turborepo",
+      "path": ".agents/skills/seed-turborepo/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": ["https://turborepo.com/docs", "https://pnpm.io/workspaces"]
+    },
+    {
+      "name": "seed-vercel-deploy",
+      "path": ".agents/skills/seed-vercel-deploy/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": [
+        "https://vercel.com/docs/monorepos",
+        "https://vercel.com/docs/frameworks/full-stack/nuxt",
+        "https://vercel.com/docs/deployments"
+      ]
+    },
+    {
+      "name": "seed-environment",
+      "path": ".agents/skills/seed-environment/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": [
+        "https://nuxt.com/docs/4.x/guide/going-further/runtime-config",
+        "https://docs.expo.dev/guides/environment-variables/",
+        "https://vercel.com/docs/environment-variables"
+      ]
+    },
+    {
+      "name": "seed-quality",
+      "path": ".agents/skills/seed-quality/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": [
+        "https://nuxt.com/docs/4.x/getting-started/testing",
+        "https://docs.expo.dev/develop/unit-testing/"
+      ]
+    }
+  ]
+}

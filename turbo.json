@@ -1,0 +1,59 @@
+{
+  "$schema": "https://turborepo.dev/schema.json",
+  "globalPassThroughEnv": ["CI", "VERCEL", "VERCEL_ENV", "VERCEL_URL", "NODE_OPTIONS"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "env": [
+        "NUXT_*",
+        "EXPO_PUBLIC_*",
+        "SEED_MODE",
+        "DATABASE_URL",
+        "DATABASE_URL_UNPOOLED",
+        "BETTER_AUTH_SECRET",
+        "BETTER_AUTH_URL",
+        "TRUSTED_ORIGINS",
+        "MOBILE_SCHEME",
+        "RESEND_API_KEY",
+        "EMAIL_FROM",
+        "NITRO_PRESET"
+      ],
+      "outputs": [".output/**", ".vercel/output/**", "dist/**"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "env": [
+        "NUXT_*",
+        "EXPO_PUBLIC_*",
+        "SEED_MODE",
+        "DATABASE_URL",
+        "BETTER_AUTH_SECRET",
+        "BETTER_AUTH_URL",
+        "TRUSTED_ORIGINS",
+        "MOBILE_SCHEME",
+        "RESEND_API_KEY",
+        "EMAIL_FROM"
+      ]
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"],
+      "outputs": []
+    },
+    "lint": {
+      "dependsOn": ["^lint"],
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["^test"],
+      "outputs": []
+    },
+    "db:generate": {
+      "cache": false
+    },
+    "db:migrate": {
+      "cache": false
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "Seed Mobile",
+    "slug": "nuxt-expo-seed",
+    "version": "1.0.0",
+    "scheme": "nuxt-expo-seed",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.nuxt.expo.seed"
+    },
+    "android": {
+      "package": "com.example.nuxt.expo.seed"
+    },
+    "web": {
+      "output": "static"
+    },
+    "plugins": ["expo-router", "expo-secure-store"],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@seed/auth",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test src/*.test.ts"
+  },
+  "dependencies": {
+    "@better-auth/drizzle-adapter": "1.7.18",
+    "@better-auth/expo": "1.7.18",
+    "@seed/db": "workspace:*",
+    "@seed/email": "workspace:*",
+    "better-auth": "1.7.18"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.15",
+    "drizzle-orm": "0.45.4"
+  }
+}

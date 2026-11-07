@@ -1,0 +1,38 @@
+{
+  "name": "nuxt-expo-seed",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.33.2",
+  "engines": {
+    "node": ">=22.22.0",
+    "pnpm": ">=10.33.2 <11"
+  },
+  "scripts": {
+    "env:check": "node scripts/check-env.mjs",
+    "dev": "turbo run dev --filter=@seed/landing --filter=@seed/crm",
+    "dev:landing": "pnpm --filter @seed/landing dev",
+    "dev:crm": "pnpm --filter @seed/crm dev",
+    "dev:mobile": "pnpm --filter @seed/mobile dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "lint": "turbo run lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "turbo run test",
+    "test:e2e": "playwright test",
+    "db:generate": "pnpm --filter @seed/db db:generate",
+    "db:migrate": "pnpm --filter @seed/db db:migrate",
+    "db:studio": "pnpm --filter @seed/db db:studio",
+    "check": "pnpm env:check && pnpm typecheck && pnpm lint && pnpm test && pnpm build",
+    "setup:env": "node scripts/setup-env.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.65.0",
+    "prettier": "3.9.10",
+    "turbo": "2.11.10",
+    "typescript": "6.0.3",
+    "tsx": "4.23.15",
+    "@types/node": "22.19.3"
+  }
+}

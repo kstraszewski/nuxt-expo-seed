@@ -1,0 +1,27 @@
+node_modules/
+.nuxt/
+.output/
+.expo/
+dist/
+.vercel/
+.turbo/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+coverage/
+playwright-report/
+test-results/
+.DS_Store
+*.log
+
+# Nuxt Skill Hub generates version-specific local guidance during prepare.
+/.agents/skills/nuxt-crm/
+/.agents/skills/nuxt-landing/
+/.claude/
+/.cline/
+/.codeium/
+/.continue/
+/.cursor/
+/.roo/
+/.codex/
