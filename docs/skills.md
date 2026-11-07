@@ -1,49 +1,86 @@
 # Skillsy projektu
 
-Repozytorium zawiera 16 krótkich skillsów w `.agents/skills`. Są częścią startera, więc trafiają razem z nim do każdego nowego projektu. `AGENTS.md` wskazuje je również agentom, które nie odkrywają tego katalogu automatycznie.
+Repozytorium zawiera 46 skillsów w `.agents/skills`. To 17 krótkich instrukcji opisujących decyzje startera oraz 29 pełnych skillsów upstream z referencjami, przykładami, licencjami i zapisanym pochodzeniem. Cały zestaw trafia do nowego projektu razem z kodem.
 
-Instrukcje opisują konkretne granice i decyzje tego monorepo. Przed zmianą API każą sprawdzić zainstalowaną wersję i dokumentację jej odpowiadającą. Nie zastępują dokumentacji bibliotek.
+Instrukcje `seed-*` mówią, jak pracować w tym konkretnym monorepo. Skillsy upstream opisują właściwe użycie bibliotek i usług. Agent powinien wczytać odpowiedni skill i potrzebne referencje, zamiast ładować wszystkie instrukcje do każdego zadania.
 
-Podczas `nuxt prepare` moduł Nuxt Skill Hub generuje również lokalne instrukcje dopasowane do zainstalowanych modułów Nuxt. Te katalogi są ignorowane w Git. Po świeżej instalacji należy wykonać krok prepare aplikacji, zanim agent będzie potrzebował tej dodatkowej wiedzy.
+## Skillsy upstream
 
-| Skill                 | Kiedy go użyć                                |
-| --------------------- | -------------------------------------------- |
-| `seed-nuxt`           | Strony Nuxt, SSR, endpointy i runtime config |
-| `seed-nuxt-ui`        | Formularze, tabele i komponenty Nuxt UI      |
-| `seed-better-auth`    | Rejestracja, logowanie, sesje i reset hasła  |
-| `seed-neon-postgres`  | Neon, Drizzle, schemat i migracje            |
-| `seed-resend`         | Wiadomości transakcyjne i nadawca            |
-| `seed-expo-overview`  | Wybór właściwego workflow Expo               |
-| `seed-expo-structure` | Rozmieszczenie plików mobilnych              |
-| `seed-expo-router`    | Routing, linki i powrót z uwierzytelniania   |
-| `seed-expo-native-ui` | Ekrany i kontrolki natywne                   |
-| `seed-expo-data`      | Żądania HTTP i sesje mobile                  |
-| `seed-expo-upgrade`   | Aktualizacja SDK i zgodność zależności       |
-| `seed-eas`            | Buildy natywne i przygotowanie sklepów       |
-| `seed-turborepo`      | Taski, cache i granice workspace             |
-| `seed-vercel-deploy`  | Trzy projekty Vercel i sprawdzenie wdrożenia |
-| `seed-environment`    | Pliki `.env`, sekrety i środowiska           |
-| `seed-quality`        | Testy i zakres końcowej weryfikacji          |
+| Obszar                  | Zainstalowane skillsy                                                                                                         | Źródło                      | Licencja   |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------- | --------------------------- | ---------- |
+| Nuxt UI                 | `nuxt-ui`                                                                                                                     | `nuxt/ui`, gałąź v4         | MIT        |
+| Vue                     | `vue-best-practices`, `vue-debug-guides`, `vue-testing-best-practices`, `create-adaptable-composable`                         | `vuejs-ai/skills`           | MIT        |
+| Expo, struktura i UI    | `expo-overview`, `expo-project-structure`, `expo-router`, `expo-ui`, `expo-native-ui`, `expo-design-system`, `expo-animation` | `expo/skills`               | MIT        |
+| Expo, dane i utrzymanie | `expo-data-fetching`, `expo-upgrade`, `expo-dev-client`, `expo-examples`                                                      | `expo/skills`               | MIT        |
+| EAS                     | `eas-app-stores`, `eas-workflows`, `eas-simulator`                                                                            | `expo/skills`               | MIT        |
+| Neon                    | `neon`, `neon-postgres`                                                                                                       | `neondatabase/agent-skills` | Apache-2.0 |
+| Resend                  | `resend`, `email-best-practices`                                                                                              | `resend/resend-skills`      | MIT        |
+| Turborepo               | `turborepo`                                                                                                                   | `vercel/turborepo`          | MIT        |
+| Vercel                  | `vercel-cli`, `deployments-cicd`, `env-vars`, `bootstrap`, `verification`                                                     | `vercel/vercel-plugin`      | Apache-2.0 |
 
-## Pochodzenie i licencja
+Nuxt UI, Expo, Neon, Resend, Turborepo i Vercel pochodzą z repozytoriów dostawców. Zestaw Vue pochodzi z ekosystemu `vuejs-ai`, z którego korzysta również Nuxt Skill Hub. Przy rozbieżności API sprawdź wersję biblioteki i jej oficjalną dokumentację.
 
-Skillsy `seed-*` są oryginalnymi instrukcjami przygotowanymi dla tego startera i udostępnionymi na jego licencji MIT. Nie są kopiami komercyjnych pluginów ani prywatnych skillsów autora. Nie zawierają osobistych ścieżek, identyfikatorów kont i sekretów.
+Nuxt UI zawiera między innymi instrukcje themingu, formularzy, layoutów landing i dashboard oraz tabel. Expo ma osobne, pełne instrukcje systemu wizualnego, natywnych komponentów i animacji. Wcześniejsze krótkie wskazówki startera nie zastępują tych materiałów.
 
-Każdy `SKILL.md` zawiera odnośniki do oficjalnej dokumentacji. Maszynowa lista, zakres i źródła znajdują się w [skills-manifest.json](skills-manifest.json). Dokumentacja zewnętrzna zachowuje własne prawa i licencje. Sam odnośnik nie oznacza, że jej treść została dołączona do repozytorium.
+Skillsy EAS opisują workflow na przyszłość. Sama obecność instrukcji nie oznacza utworzenia projektu EAS, uruchomienia symulatora ani opublikowania aplikacji w sklepie. Nie dołączamy instrukcji dla nieużywanych funkcji takich jak App Clips, brownfield, Neon AI Gateway czy React Email.
 
-Data przygotowania instrukcji: 7 listopada 2026. Zgodność należy sprawdzać przy aktualizacji bibliotek. Skille nie utrwalają numerów wersji jako wiecznego zalecenia.
+## Instrukcje własne startera
 
-## Opcjonalne instrukcje dostawców
+| Skill                 | Kiedy go użyć                                             |
+| --------------------- | --------------------------------------------------------- |
+| `seed-design-system`  | Wspólny motyw `@seed/ui`, tokeny, typografia i komponenty |
+| `seed-nuxt`           | Strony Nuxt, SSR, endpointy i runtime config              |
+| `seed-nuxt-ui`        | Lokalne konwencje Nuxt UI i granice wspólnej warstwy      |
+| `seed-better-auth`    | Rejestracja, logowanie, sesje i reset hasła               |
+| `seed-neon-postgres`  | Neon, Drizzle, schemat i migracje startera                |
+| `seed-resend`         | Lokalne szablony transakcyjne i nadawca                   |
+| `seed-expo-overview`  | Wybór workflow mobilnej aplikacji startera                |
+| `seed-expo-structure` | Rozmieszczenie plików mobilnych w monorepo                |
+| `seed-expo-router`    | Routing i powrót z uwierzytelniania                       |
+| `seed-expo-native-ui` | Granice natywnej warstwy interfejsu                       |
+| `seed-expo-data`      | Kontrakt CRM, żądania HTTP i sesje mobile                 |
+| `seed-expo-upgrade`   | Aktualizacja SDK i zgodność zależności                    |
+| `seed-eas`            | Własne identyfikatory produktu i przygotowanie dostawy    |
+| `seed-turborepo`      | Taski, cache i granice workspace                          |
+| `seed-vercel-deploy`  | Trzy projekty Vercel i sprawdzenie wdrożenia              |
+| `seed-environment`    | Pliki `.env`, sekrety i środowiska                        |
+| `seed-quality`        | Testy i zakres końcowej weryfikacji                       |
 
-Jeśli agent potrzebuje szerszych instrukcji, sprawdź oficjalne źródło i licencję, a potem zainstaluj tylko wybrane skillsy w projekcie. Zachowaj ich źródła i wersję lub commit. Nie ma potrzeby instalowania niepowiązanych skillsów tylko dlatego, że są dostępne.
+Nuxt Skill Hub może ponadto generować lokalne instrukcje dopasowane do zainstalowanych modułów przy `nuxt prepare`. Pliki generowane są ignorowane w Git. W CI moduł pomija generowanie. Utrzymywany zestaw 46 skillsów jest dostępny także bez tego kroku.
 
-- Nuxt: [Nuxt Skill Hub](https://github.com/onmax/nuxt-skill-hub).
-- Nuxt UI: [skills w repozytorium Nuxt UI](https://github.com/nuxt/ui/tree/v4/skills).
-- Better Auth: [better-auth/skills](https://github.com/better-auth/skills).
-- Neon: [neondatabase/agent-skills](https://github.com/neondatabase/agent-skills).
-- Resend: [resend/resend-skills](https://github.com/resend/resend-skills).
-- Turborepo: [vercel/turborepo](https://github.com/vercel/turborepo/tree/main/skills).
-- Expo: [instrukcje AI w dokumentacji Expo](https://docs.expo.dev/llms.txt).
-- Vercel: [dokumentacja platformy](https://vercel.com/docs).
+## Instalacja, sprawdzenie i aktualizacja
 
-Instalowanie instrukcji dostawcy nie daje zgody na wysyłkę danych, zmianę kont ani publikację. Zakres zewnętrznych działań nadal wynika z bieżącego zlecenia użytkownika.
+```sh
+pnpm skills:check
+pnpm skills:install
+pnpm skills:refresh
+```
+
+`skills:check` działa offline. Porównuje pliki upstream z zapisanymi sumami SHA-256, więc wykrywa brakujący plik i bezpośrednią zmianę importowanej instrukcji.
+
+`skills:install` odtwarza wyłącznie wybrane katalogi ze wskazanych commitów. Nie instaluje niczego globalnie i nie pobiera pełnych repozytoriów ani `node_modules`. Wymaga sieci. Nie nadpisuje lokalnych zmian, które nie odpowiadają lockfile.
+
+`skills:refresh` jest świadomą aktualizacją. Sprawdza bieżące commity wybranych gałęzi źródłowych, pobiera wyłącznie wybrane skillsy i zapisuje nowy lockfile. Po wykonaniu przejrzyj diff instrukcji, źródeł i licencji oraz sprawdź zgodność z zainstalowanymi bibliotekami. Zmiana instrukcji nie aktualizuje automatycznie zależności aplikacji. Opcja `--force` nadpisuje lokalne zmiany, więc używaj jej dopiero po ich zachowaniu lub świadomym odrzuceniu.
+
+Polecenia odpowiadają bezpośrednio `node scripts/sync-skills.mjs --check`, `--install` i `--refresh`. Skrypt wymaga Node zgodnego ze starterem oraz dostępu HTTPS do publicznego GitHub i serwera licencji Apache. Publiczne API GitHub ma limity, więc ponowne odtwarzanie całego zestawu nie powinno być krokiem każdego builda. Kontrola offline może działać w CI.
+
+## Pochodzenie, adaptacja i licencje
+
+- [skills-sources.json](skills-sources.json) określa wybrane repozytoria, gałęzie, ścieżki i licencje.
+- [skills-upstream-lock.json](skills-upstream-lock.json) zapisuje dokładne commity, URL źródeł, rozmiary i sumy plików.
+- Każdy importowany skill ma `SOURCE.json`, `UPSTREAM-LICENSE` oraz pełny oryginał entrypointu w `UPSTREAM-SKILL.md`. Apache-2.0 ma dodatkowo pełny tekst licencji, jeśli plik dostawcy zawiera tylko skróconą deklarację.
+- [skills-manifest.json](skills-manifest.json) opisuje autorskie instrukcje i łączny zestaw.
+
+Metadane entrypointów `SKILL.md` zostały dostosowane do pól wspieranych przez Codex. Treść instrukcji i referencje pozostają niezmienione. Oryginalne metadane, w tym dodatkowe pola pluginów, można sprawdzić w `UPSTREAM-SKILL.md`. Lockfile zapisuje osobno sumę oryginału i wynikowej adaptacji. Skrypt odtwarza ją deterministycznie.
+
+Nie edytuj importowanych instrukcji, aby dopisać regułę tego projektu. Dodaj taką decyzję do odpowiedniego `seed-*` lub `AGENTS.md`. Importowane pliki są wyłączone z Prettier, żeby zachować weryfikowalne sumy i pochodzenie. Instrukcje `seed-*` są oryginalne i mają licencję MIT startera. Materiały upstream zachowują własne licencje.
+
+## Better Auth i zakres instrukcji
+
+Repozytorium [better-auth/skills](https://github.com/better-auth/skills) zawiera szersze instrukcje `better-auth-best-practices`, tworzenia auth, email/password i bezpieczeństwa. Sprawdzone źródło nie deklaruje licencji repozytorium i nie ma pliku LICENSE. Dlatego publiczny starter korzysta z własnego `seed-better-auth` oraz linków do oficjalnej dokumentacji, zamiast redystrybuować tę treść jako MIT.
+
+Dokumentacja auth: [Better Auth](https://www.better-auth.com/docs), [Nuxt](https://www.better-auth.com/docs/integrations/nuxt), [Expo](https://www.better-auth.com/docs/integrations/expo). Sprawdzaj ją dla wersji zapisanej w lockfile. Zainstalowane instrukcje dostawcy w środowisku konkretnego agenta można wykorzystać lokalnie.
+
+Starter pozostaje przy wybranej architekturze. Instrukcje Neon nie są poleceniem zastąpienia istniejącego Better Auth, a przykłady Next.js w skillu Vercel nie zmieniają aplikacji Nuxt. Demo nie wymaga połączenia z Vercel ani provisioning usług. Reguły `bootstrap` o linkowaniu dotyczą konfiguracji prawdziwych zasobów, nie obejrzenia demonstracyjnego UI.
+
+Skillsy nie nadają zgody na wysyłanie wiadomości, zmianę kont ani publikację. Takie działania nadal wynikają z bieżącego zadania użytkownika.

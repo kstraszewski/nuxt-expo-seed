@@ -1,4 +1,5 @@
 export default defineNuxtConfig({
+  extends: ['@seed/ui'],
   compatibilityDate: '2026-11-07',
   modules: ['@nuxt/ui', '@nuxt/eslint', 'nuxt-skill-hub'],
   skillHub: { targets: ['codex'], generationMode: 'prepare', skillName: 'nuxt-landing' },

@@ -22,32 +22,63 @@ async function submit() {
 }
 </script>
 <template>
-  <UContainer class="max-w-md py-20"
-    ><UCard
-      ><h1 class="text-xl font-semibold mb-6">Nowe hasło</h1>
-      <UAlert v-if="message" color="success" :title="message" class="mb-4" /><UAlert
-        v-if="failure || route.query.error"
-        color="error"
-        :title="failure || 'Link jest nieważny. Poproś o nowy.'"
-        class="mb-4" /><UForm :schema="schema" :state="state" @submit="submit"
-        ><UFormField name="password" label="Hasło" required
-          ><UInput
-            v-model="state.password"
-            type="password"
-            autocomplete="new-password"
-            class="w-full" /></UFormField
-        ><UButton
-          class="mt-4"
-          color="neutral"
-          type="submit"
-          label="Zmień hasło"
-          :loading="busy"
-          :disabled="!route.query.token || Boolean(message)" /></UForm
-      ><UButton
-        class="mt-4"
+  <SeedAuthFrame
+    eyebrow="03 / Odzyskaj dostęp"
+    title="Nowe hasło."
+    accent="Ten sam porządek."
+    description="Ustaw nowe hasło i wróć do swojej przestrzeni. Twoje kontakty pozostają na swoim miejscu."
+  >
+    <div class="mb-8 sm:mb-10">
+      <p class="seed-kicker text-muted mb-4">Bezpieczeństwo konta</p>
+      <h2 class="text-3xl sm:text-4xl font-semibold tracking-[-0.045em]">
+        Ustaw nowe hasło<span class="text-primary">.</span>
+      </h2>
+      <p class="text-muted text-sm leading-relaxed mt-3">
+        Wybierz hasło, którego nie używasz w innych miejscach.
+      </p>
+    </div>
+
+    <UAlert v-if="message" color="success" variant="outline" :title="message" class="mb-6" />
+    <UAlert
+      v-if="failure || route.query.error || !route.query.token"
+      color="error"
+      variant="outline"
+      icon="i-lucide-link-2-off"
+      :title="failure || 'Link jest nieważny. Poproś o nowy.'"
+      class="mb-6"
+    />
+    <UForm :schema="schema" :state="state" class="space-y-6" @submit="submit">
+      <UFormField name="password" label="Nowe hasło" description="Minimum 12 znaków" required>
+        <UInput
+          v-model="state.password"
+          type="password"
+          autocomplete="new-password"
+          placeholder="Nowe, bezpieczne hasło"
+          size="xl"
+          class="w-full"
+        />
+      </UFormField>
+      <UButton
+        color="primary"
+        type="submit"
+        label="Zmień hasło"
+        trailing-icon="i-lucide-arrow-up-right"
+        size="xl"
+        block
+        class="justify-between"
+        :loading="busy"
+        :disabled="!route.query.token || Boolean(message)"
+      />
+    </UForm>
+    <div class="mt-7 pt-6 border-t border-default">
+      <UButton
         to="/login"
         color="neutral"
         variant="link"
-        label="Przejdź do logowania" /></UCard
-  ></UContainer>
+        icon="i-lucide-arrow-left"
+        label="Przejdź do logowania"
+        class="p-0 text-sm"
+      />
+    </div>
+  </SeedAuthFrame>
 </template>

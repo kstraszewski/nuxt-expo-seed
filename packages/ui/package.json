@@ -1,0 +1,14 @@
+{
+  "name": "@seed/ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./nuxt.config.ts",
+  "dependencies": {
+    "@fontsource-variable/inter-tight": "5.3.0"
+  },
+  "devDependencies": {
+    "nuxt": "4.6.4",
+    "typescript": "6.0.3"
+  }
+}

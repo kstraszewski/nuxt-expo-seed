@@ -1,0 +1,84 @@
+[
+  {
+    "repository": "nuxt/ui",
+    "ref": "v4",
+    "commit": "a11f0327cc374c2e5f8694db6aa0a7ddc6a028f8",
+    "license": "MIT",
+    "licensePath": "LICENSE.md",
+    "skills": ["skills/nuxt-ui"]
+  },
+  {
+    "repository": "neondatabase/agent-skills",
+    "ref": "main",
+    "commit": "2b0e2b6f56d2b41c5363049e30e6ab72aa260cce",
+    "license": "Apache-2.0",
+    "licensePath": "LICENSE",
+    "skills": ["skills/neon", "skills/neon-postgres"]
+  },
+  {
+    "repository": "resend/resend-skills",
+    "ref": "main",
+    "commit": "389de56a2e48903c4b8ac7b8f2b8ee1f2c1bb9df",
+    "license": "MIT",
+    "licensePath": "LICENSE",
+    "skills": ["skills/resend", "skills/email-best-practices"]
+  },
+  {
+    "repository": "expo/skills",
+    "ref": "main",
+    "commit": "a9e5bd3fa00b4e61f632e43f85da73aee1942582",
+    "license": "MIT",
+    "licensePath": "LICENSE",
+    "skills": [
+      "plugins/expo/skills/expo-overview",
+      "plugins/expo/skills/expo-project-structure",
+      "plugins/expo/skills/expo-router",
+      "plugins/expo/skills/expo-ui",
+      "plugins/expo/skills/expo-native-ui",
+      "plugins/expo/skills/expo-design-system",
+      "plugins/expo/skills/expo-data-fetching",
+      "plugins/expo/skills/expo-animation",
+      "plugins/expo/skills/expo-upgrade",
+      "plugins/expo/skills/expo-dev-client",
+      "plugins/expo/skills/expo-examples",
+      "plugins/expo/skills/eas-app-stores",
+      "plugins/expo/skills/eas-workflows",
+      "plugins/expo/skills/eas-simulator"
+    ]
+  },
+  {
+    "repository": "vercel/vercel-plugin",
+    "ref": "main",
+    "commit": "2a163af1e4b9ba5f8a02de3737eb0c884e21d765",
+    "license": "Apache-2.0",
+    "licensePath": "LICENSE",
+    "skills": [
+      "skills/vercel-cli",
+      "skills/deployments-cicd",
+      "skills/env-vars",
+      "skills/bootstrap",
+      "skills/verification"
+    ]
+  },
+  {
+    "repository": "vercel/turborepo",
+    "ref": "main",
+    "commit": "17691acd9bc80171e5ef4b3532ff0748ba231813",
+    "license": "MIT",
+    "licensePath": "LICENSE",
+    "skills": ["skills/turborepo"]
+  },
+  {
+    "repository": "vuejs-ai/skills",
+    "ref": "main",
+    "commit": "198f0cd8f7f9c0a3d9b566ccc16de6677519ee78",
+    "license": "MIT",
+    "licensePath": "LICENSE",
+    "skills": [
+      "skills/vue-best-practices",
+      "skills/vue-debug-guides",
+      "skills/vue-testing-best-practices",
+      "skills/create-adaptable-composable"
+    ]
+  }
+]

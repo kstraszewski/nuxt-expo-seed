@@ -8,7 +8,7 @@ license: MIT
 
 1. Check the installed @nuxt/ui version and use its matching component documentation. Keep UApp around the application for overlays and notifications.
 
-2. Use Nuxt UI semantic colors, accessible labels, visible focus and real loading/error/empty states. This repository has no inherited brand identity. Keep the neutral foundation until a project supplies its own design.
+2. Use Nuxt UI semantic colors, accessible labels, visible focus and real loading/error/empty states. Both Nuxt apps inherit the shared @seed/ui layer. Use seed-design-system and docs/design-system.md for the chosen koonrad.dev visual direction. Change shared tokens and component variants in packages/ui.
 
 3. Validate form payloads with @seed/shared schemas and show server errors. Browser validation supplements server validation. Reuse Nuxt UI components before adding competing UI libraries.
 

@@ -1,0 +1,9 @@
+{
+  "repository": "nuxt/ui",
+  "commit": "a11f0327cc374c2e5f8694db6aa0a7ddc6a028f8",
+  "sourcePath": "skills/nuxt-ui",
+  "license": "MIT",
+  "licensePath": "LICENSE.md",
+  "modified": true,
+  "modification": "Entrypoint frontmatter adapted to Codex-supported fields. Original body unchanged. Full original preserved in UPSTREAM-SKILL.md."
+}

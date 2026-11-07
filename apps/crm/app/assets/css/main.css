@@ -1,6 +1,1 @@
-@import 'tailwindcss';
-@import '@nuxt/ui';
-
-@theme {
-  --font-sans: system-ui, sans-serif;
-}
+/* App-specific CSS. Shared tokens and Nuxt UI imports live in @seed/ui. */

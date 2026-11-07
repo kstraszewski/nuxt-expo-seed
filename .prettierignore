@@ -19,3 +19,6 @@ test-results
 .roo
 .agents/skills/nuxt-crm
 .agents/skills/nuxt-landing
+
+# Preserve hashes and licensing of pinned upstream agent skills.
+.agents/skills/

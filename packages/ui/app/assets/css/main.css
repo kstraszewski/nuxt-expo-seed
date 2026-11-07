@@ -1,0 +1,183 @@
+@import '@fontsource-variable/inter-tight';
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+@source "../../../../../apps/landing/app";
+@source "../../../../../apps/crm/app";
+@source "../../components";
+
+@theme static {
+  --font-sans: 'Inter Tight Variable', 'Arial', sans-serif;
+  --color-cobalt-50: #eef1ff;
+  --color-cobalt-100: #dfe5ff;
+  --color-cobalt-200: #c3ceff;
+  --color-cobalt-300: #9aabff;
+  --color-cobalt-400: #6b81fc;
+  --color-cobalt-500: #2949ed;
+  --color-cobalt-600: #203ad5;
+  --color-cobalt-700: #1d31b4;
+  --color-cobalt-800: #1d2b92;
+  --color-cobalt-900: #1c2876;
+  --color-cobalt-950: #101641;
+  --color-citron-50: #fafde9;
+  --color-citron-100: #f2fac8;
+  --color-citron-200: #e8f49e;
+  --color-citron-300: #deef78;
+  --color-citron-400: #c6de42;
+  --color-citron-500: #a7c126;
+  --color-citron-600: #819916;
+  --color-citron-700: #607316;
+  --color-citron-800: #4d5a18;
+  --color-citron-900: #424d19;
+  --color-citron-950: #202a08;
+}
+
+:root {
+  --ui-primary: #2949ed;
+  --ui-secondary: #deef78;
+  --ui-text: #17191b;
+  --ui-text-highlighted: #17191b;
+  --ui-text-toned: #444951;
+  --ui-text-muted: #666b75;
+  --ui-text-dimmed: #757b85;
+  --ui-text-inverted: #ffffff;
+  --ui-bg: #f4f5f6;
+  --ui-bg-muted: #eceef0;
+  --ui-bg-elevated: #ffffff;
+  --ui-bg-accented: #e4e7eb;
+  --ui-bg-inverted: #17191b;
+  --ui-border: #d8dbdf;
+  --ui-border-muted: #e5e7eb;
+  --ui-border-accented: #b8bec7;
+  --ui-border-inverted: #17191b;
+  --ui-radius: 0rem;
+  --ui-container: 78rem;
+  --ui-header-height: 6.25rem;
+  --seed-highlight-bg: #deef78;
+  --seed-highlight-text: #17191b;
+  --seed-poster-bg: #2949ed;
+  --seed-poster-text: #ffffff;
+  --seed-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dark {
+  --ui-primary: #9aabff;
+  --ui-secondary: #deef78;
+  --ui-text: #e8e9ec;
+  --ui-text-highlighted: #f5f6f8;
+  --ui-text-toned: #c3c7cf;
+  --ui-text-muted: #a0a6b1;
+  --ui-text-dimmed: #929aa8;
+  --ui-text-inverted: #101216;
+  --ui-bg: #101216;
+  --ui-bg-muted: #171a20;
+  --ui-bg-elevated: #1b1f26;
+  --ui-bg-accented: #292f39;
+  --ui-bg-inverted: #f4f5f6;
+  --ui-border: #343b47;
+  --ui-border-muted: #272d37;
+  --ui-border-accented: #4c5565;
+  --ui-border-inverted: #f4f5f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--ui-bg);
+  color: var(--ui-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+::selection {
+  background: var(--seed-highlight-bg);
+  color: var(--seed-highlight-text);
+}
+[id] {
+  scroll-margin-top: 2rem;
+}
+.seed-kicker {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.seed-title {
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.055em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+.seed-highlight {
+  color: var(--seed-highlight-text);
+  background: linear-gradient(
+    transparent 57%,
+    var(--seed-highlight-bg) 57%,
+    var(--seed-highlight-bg) 94%,
+    transparent 94%
+  );
+  padding-inline: 0.03em;
+  box-decoration-break: clone;
+}
+.dark .seed-highlight {
+  color: var(--ui-text-highlighted);
+  background: linear-gradient(
+    transparent 57%,
+    rgb(222 239 120 / 0.2) 57%,
+    rgb(222 239 120 / 0.2) 94%,
+    transparent 94%
+  );
+}
+.seed-stat {
+  font-size: clamp(2.25rem, 3vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  font-variant-numeric: tabular-nums;
+}
+.seed-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.05em;
+}
+.seed-brand-mark {
+  width: 1.35rem;
+  height: 1.35rem;
+  color: var(--ui-primary);
+}
+.seed-poster {
+  background-color: var(--seed-poster-bg);
+  color: var(--seed-poster-text);
+}
+.seed-focus:focus-visible {
+  outline: 2px solid var(--ui-primary);
+  outline-offset: 5px;
+}
+@media (max-width: 760px) {
+  :root {
+    --ui-header-height: 5rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

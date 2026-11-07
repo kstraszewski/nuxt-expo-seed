@@ -1,7 +1,7 @@
 {
   "createdAt": "2026-11-07",
   "license": "MIT",
-  "redistributedThirdPartySkills": false,
+  "redistributedThirdPartySkills": true,
   "skills": [
     {
       "name": "seed-nuxt",
@@ -147,6 +147,21 @@
         "https://nuxt.com/docs/4.x/getting-started/testing",
         "https://docs.expo.dev/develop/unit-testing/"
       ]
+    },
+    {
+      "name": "seed-design-system",
+      "path": ".agents/skills/seed-design-system/SKILL.md",
+      "kind": "original-project-guidance",
+      "license": "MIT",
+      "references": [
+        "docs/design-system.md",
+        "https://ui.nuxt.com/docs/getting-started/theme",
+        "https://nuxt.com/docs/4.x/guide/going-further/layers"
+      ]
     }
-  ]
+  ],
+  "upstreamLock": "docs/skills-upstream-lock.json",
+  "upstreamSkillCount": 29,
+  "projectSkillCount": 17,
+  "totalSkillCount": 46
 }

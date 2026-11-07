@@ -1,0 +1,9 @@
+{
+  "repository": "neondatabase/agent-skills",
+  "commit": "2b0e2b6f56d2b41c5363049e30e6ab72aa260cce",
+  "sourcePath": "skills/neon-postgres",
+  "license": "Apache-2.0",
+  "licensePath": "LICENSE",
+  "modified": true,
+  "modification": "Entrypoint frontmatter adapted to Codex-supported fields. Original body unchanged. Full original preserved in UPSTREAM-SKILL.md."
+}

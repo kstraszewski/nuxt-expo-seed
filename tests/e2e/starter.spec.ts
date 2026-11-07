@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test'
 
 test('landing has stack and working CRM link', async ({ page }) => {
   await page.goto('http://127.0.0.1:3000')
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('stacku technologicznego')
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Po swojemu.')
   await expect(page.getByRole('heading', { name: 'Neon + Drizzle' })).toBeVisible()
   await expect(page.getByRole('link', { name: 'Zobacz CRM' })).toHaveAttribute(
     'href',
@@ -47,9 +47,27 @@ test('API exposes safe status and rejects untrusted origins', async ({ request }
 
 test('demo login explains setup and cannot register', async ({ page }) => {
   await page.goto('http://127.0.0.1:3001/login')
-  await expect(page.getByText('Logowanie wymaga konfiguracji')).toBeVisible()
+  await expect(page.getByText('Oglądasz podgląd startera', { exact: true })).toBeVisible()
   await expect(page.getByRole('button', { name: 'Zaloguj się', exact: true })).toBeDisabled()
   await page.getByRole('button', { name: 'Utwórz konto', exact: true }).click()
   await expect(page.getByRole('textbox', { name: 'Imię', exact: false })).toBeVisible()
   await expect(page.getByRole('button', { name: 'Utwórz konto', exact: true })).toBeDisabled()
+})
+
+test('landing application selector and mobile navigation work', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('http://127.0.0.1:3000')
+  const selector = page.getByRole('group', { name: 'Wybierz aplikację do podglądu' })
+  await selector.getByRole('button', { name: 'Pokaż Mobile', exact: true }).click()
+  await expect(page.getByRole('link', { name: 'Otwórz Mobile', exact: true })).toHaveAttribute(
+    'href',
+    'http://localhost:8081',
+  )
+  await expect(selector.getByRole('button', { name: 'Pokaż Mobile', exact: true })).toHaveAttribute(
+    'aria-pressed',
+    'true',
+  )
+  await page.getByRole('button', { name: /menu/i }).first().click()
+  await expect(page.getByRole('link', { name: 'Pierwsze kroki', exact: true })).toBeVisible()
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
 })

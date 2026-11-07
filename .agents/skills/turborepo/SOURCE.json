@@ -1,0 +1,9 @@
+{
+  "repository": "vercel/turborepo",
+  "commit": "17691acd9bc80171e5ef4b3532ff0748ba231813",
+  "sourcePath": "skills/turborepo",
+  "license": "MIT",
+  "licensePath": "LICENSE",
+  "modified": true,
+  "modification": "Entrypoint frontmatter adapted to Codex-supported fields. Original body unchanged. Full original preserved in UPSTREAM-SKILL.md."
+}

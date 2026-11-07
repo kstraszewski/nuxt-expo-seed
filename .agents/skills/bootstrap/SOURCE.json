@@ -1,0 +1,9 @@
+{
+  "repository": "vercel/vercel-plugin",
+  "commit": "2a163af1e4b9ba5f8a02de3737eb0c884e21d765",
+  "sourcePath": "skills/bootstrap",
+  "license": "Apache-2.0",
+  "licensePath": "LICENSE",
+  "modified": true,
+  "modification": "Entrypoint frontmatter adapted to Codex-supported fields. Original body unchanged. Full original preserved in UPSTREAM-SKILL.md."
+}

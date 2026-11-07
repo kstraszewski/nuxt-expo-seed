@@ -1,6 +1,6 @@
 # Nuxt Expo Seed
 
-Uniwersalna baza nowego projektu oparta na Nuxt, Vue i Expo. Repozytorium zawiera landing page, CRM, aplikację mobilną oraz wspólne pakiety do bazy danych, logowania, e-maili i walidacji. Interfejs ma neutralny wygląd. Nie zawiera treści, danych ani identyfikacji wizualnej innego produktu.
+Uniwersalna baza nowego projektu oparta na Nuxt, Vue i Expo. Repozytorium zawiera landing page, CRM, aplikację mobilną oraz wspólne pakiety do bazy danych, logowania, e-maili i walidacji. Landing i CRM dziedziczą wspólny motyw Nuxt UI inspirowany aktualnym koonrad.dev, z fontem Inter Tight, niebieskim akcentem i limonkowym markerem. Repozytorium zachowuje ogólne treści i dane startera.
 
 Starter działa w trybie demonstracyjnym bez konta Neon i bez klucza Resend. Tryb `live` łączy CRM i aplikację mobilną z prawdziwym backendem. To osobny etap konfiguracji opisany poniżej.
 
@@ -37,17 +37,18 @@ Do pracy tylko nad jedną aplikacją służą `pnpm dev:landing`, `pnpm dev:crm`
 
 ## Co jest w środku
 
-| Obszar                     | Technologia                      | Miejsce           |
-| -------------------------- | -------------------------------- | ----------------- |
-| Landing page               | Nuxt, Vue, Nuxt UI, Tailwind CSS | `apps/landing`    |
-| CRM i HTTP API             | Nuxt, Vue, Nuxt UI, Nitro        | `apps/crm`        |
-| iOS, Android i podgląd web | Expo, React Native, Expo Router  | `apps/mobile`     |
-| PostgreSQL                 | Neon, Drizzle ORM i migracje SQL | `packages/db`     |
-| Logowanie i sesje          | Better Auth i integracja Expo    | `packages/auth`   |
-| E-maile transakcyjne       | Resend                           | `packages/email`  |
-| Kontrakty danych           | TypeScript, Zod                  | `packages/shared` |
-| Monorepo                   | pnpm workspaces i Turborepo      | katalog główny    |
-| Instrukcje dla agentów     | `AGENTS.md` i skillsy projektu   | `.agents/skills`  |
+| Obszar                     | Technologia                          | Miejsce           |
+| -------------------------- | ------------------------------------ | ----------------- |
+| Landing page               | Nuxt, Vue, Nuxt UI, Tailwind CSS     | `apps/landing`    |
+| CRM i HTTP API             | Nuxt, Vue, Nuxt UI, Nitro            | `apps/crm`        |
+| iOS, Android i podgląd web | Expo, React Native, Expo Router      | `apps/mobile`     |
+| PostgreSQL                 | Neon, Drizzle ORM i migracje SQL     | `packages/db`     |
+| Logowanie i sesje          | Better Auth i integracja Expo        | `packages/auth`   |
+| E-maile transakcyjne       | Resend                               | `packages/email`  |
+| Kontrakty danych           | TypeScript, Zod                      | `packages/shared` |
+| Monorepo                   | pnpm workspaces i Turborepo          | katalog główny    |
+| Wspólny motyw web          | Warstwa Nuxt UI, tokeny i typografia | `packages/ui`     |
+| Instrukcje dla agentów     | `AGENTS.md` i skillsy projektu       | `.agents/skills`  |
 
 Wersje zależności są zapisane w manifestach i `pnpm-lock.yaml`. Nowy projekt zaczyna od sprawdzonego zestawu. Aktualizacje powinny przechodzić przez ten sam zestaw kontroli co zmiany kodu, szczególnie w Expo, gdzie React Native i biblioteki natywne muszą pasować do SDK.
 
@@ -117,6 +118,7 @@ Zmień nazwy aplikacji, adresy, mobile scheme i identyfikatory pakietów mobilny
 - [Zmienne środowiskowe](docs/environment.md)
 - [GitHub, Vercel i EAS](docs/deployment.md)
 - [Instrukcja nowego projektu](docs/new-project.md)
+- [Wspólny motyw Nuxt UI](docs/design-system.md)
 - [Skillsy i źródła instrukcji](docs/skills.md)
 - [Zasady pracy dla agentów](AGENTS.md)
 

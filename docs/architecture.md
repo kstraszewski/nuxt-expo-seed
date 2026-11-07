@@ -1,6 +1,6 @@
 # Architektura
 
-Landing, CRM i mobile są niezależnymi aplikacjami w jednym repozytorium. Wspólne pakiety opisują dane i usługi. Nie narzucają domeny produktu ani identyfikacji wizualnej.
+Landing, CRM i mobile są niezależnymi aplikacjami w jednym repozytorium. Wspólne pakiety opisują dane, usługi i motyw Nuxt UI. Warstwa `@seed/ui` nadaje aplikacjom web spójny styl inspirowany koonrad.dev. Domena produktu pozostaje po stronie nowego projektu.
 
 ```text
 apps/landing        Nuxt + Vue + Nuxt UI
@@ -10,6 +10,7 @@ packages/shared     kontrakty TypeScript i Zod
 packages/db         Neon + Drizzle + migracje
 packages/auth       Better Auth + integracja Expo
 packages/email      Resend
+packages/ui         wspólna warstwa motywu Nuxt UI
 ```
 
 ```mermaid

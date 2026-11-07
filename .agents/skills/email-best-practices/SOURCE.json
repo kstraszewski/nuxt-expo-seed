@@ -1,0 +1,9 @@
+{
+  "repository": "resend/resend-skills",
+  "commit": "389de56a2e48903c4b8ac7b8f2b8ee1f2c1bb9df",
+  "sourcePath": "skills/email-best-practices",
+  "license": "MIT",
+  "licensePath": "LICENSE",
+  "modified": true,
+  "modification": "Entrypoint frontmatter adapted to Codex-supported fields. Original body unchanged. Full original preserved in UPSTREAM-SKILL.md."
+}

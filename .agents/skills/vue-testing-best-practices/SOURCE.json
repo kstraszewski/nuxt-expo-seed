@@ -1,0 +1,9 @@
+{
+  "repository": "vuejs-ai/skills",
+  "commit": "198f0cd8f7f9c0a3d9b566ccc16de6677519ee78",
+  "sourcePath": "skills/vue-testing-best-practices",
+  "license": "MIT",
+  "licensePath": "LICENSE",
+  "modified": true,
+  "modification": "Entrypoint frontmatter adapted to Codex-supported fields. Original body unchanged. Full original preserved in UPSTREAM-SKILL.md."
+}
